@@ -6,7 +6,7 @@ Currently seeking full-time software development opportunities.
 
 ## Featured Projects
 
-[Live Portfolio Site] (https://feashliaa.github.io/)
+[Live Portfolio Site](https://feashliaa.github.io/)
 
 ### Job Board Aggregator
 Automated platform aggregating 500,000+ job listings from 10,000+ companies. Features daily web scraping via GitHub Actions, intelligent deduplication, and a responsive frontend with advanced filtering and sorting. Also includes a full-stack Flask version available on GitHub.
