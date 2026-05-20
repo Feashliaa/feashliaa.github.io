@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: var(--bg-color);
     background-attachment: fixed;
     color: white;
@@ -89,7 +89,6 @@ body {
 
 .nav-link.active:hover {
     background: var(--accent-hover);
-    color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
@@ -133,6 +132,8 @@ body {
 .hero-content {
     text-align: center;
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-badge {
@@ -214,6 +215,7 @@ body {
 
 .scroll-indicator {
     position: relative;
+    z-index: 1;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -224,7 +226,6 @@ body {
     animation: bounce 2s infinite;
     text-decoration: none;
 }
-
 
 .scroll-indicator:hover {
     color: white;
@@ -378,10 +379,6 @@ body {
     line-height: 1.7;
     color: var(--text-light);
     margin-bottom: 24px;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    justify-self: center;
 }
 
 .tech-stack {
@@ -445,7 +442,7 @@ body {
    SKILLS SECTION
    ======================================== */
 .skills-section {
-    padding: 40px 15px;
+    padding: 80px 30px;
     background: white;
 }
 
@@ -463,7 +460,7 @@ body {
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    border: black 1px solid;
+    border: 1px solid black;
     box-shadow: var(--shadow-sm);
 }
 
@@ -489,12 +486,11 @@ body {
 .skill-list span {
     background: white;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 16px;
     font-weight: 600;
     color: var(--text);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border: black 1px solid;
-    border-radius: 16px;
+    border: 1px solid black;
 }
 
 /* ========================================
@@ -567,7 +563,7 @@ body {
 }
 
 /* ========================================
-   MODAL CUSTOMIZATION
+   MODAL
    ======================================== */
 .modal-content {
     border-radius: 16px;
@@ -582,6 +578,20 @@ body {
 .modal-title {
     font-weight: 700;
     color: var(--text);
+}
+
+/* ========================================
+   ARROWS CANVAS
+   ======================================== */
+#arrows-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;
+    background-color: transparent;
 }
 
 /* ========================================
@@ -625,30 +635,4 @@ body {
         height: auto;
         width: 100%;
     }
-}
-
-/* Arrows background */
-#arrows-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: auto;
-    background-color: transparent;
-}
-
-.hero-section {
-    position: relative;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.scroll-indicator {
-    position: relative;
-    z-index: 1;
 }
